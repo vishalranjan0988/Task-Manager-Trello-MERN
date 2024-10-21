@@ -1,0 +1,102 @@
+   /* Overlay Styling */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7); /* Darker overlay for better focus */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure it's always on top */
+  transition: opacity 0.3s ease-in-out; /* Smooth fade-in/out */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #ffffff;
+  border-radius: 12px; /* Softer, rounded corners */
+  width: 400px;
+  padding: 30px; /* Extra padding for breathing room */
+  text-align: center;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+  transform: translateY(-20px);
+  transition: transform 0.3s ease-in-out; /* Smooth drop-in effect */
+}
+
+/* Form Fields */
+.modal-content input, .modal-content textarea {
+  width: 100%;
+  padding: 12px; /* Increased padding for comfort */
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px; /* More rounded inputs */
+  background-color: #f9f9f9; /* Subtle background for form fields */
+  font-size: 16px;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05); /* Soft inner shadow for depth */
+  transition: border 0.3s ease-in-out; /* Smooth border effect */
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.modal-content input:focus, .modal-content textarea:focus {
+  border: 1px solid #1d4ed8; /* Highlighted border on focus */
+  outline: none;
+}
+
+/* Modal Actions */
+.modal-actions {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+/* Buttons */
+.modal-actions button {
+  background-color: #1d4ed8;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for buttons */
+  transition: background-color 0.3s, box-shadow 0.3s, transform 0.2s;
+}
+
+.modal-actions button:hover {
+  background-color: #2563eb;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+  transform: translateY(-2px); /* Lift button on hover */
+}
+
+/* Button Focus State */
+.modal-actions button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(29, 78, 216, 0.3); /* Outline for focus accessibility */
+}
+
+/* Button Active State */
+.modal-actions button:active {
+  background-color: #1a4dcf; /* Darker on click */
+  transform: translateY(0); /* Reset lift on click */
+}
+
+/* Modal Animation */
+.modal-overlay.show {
+  opacity: 1;
+}
+
+.modal-content {
+  transform: translateY(0);
+}
+
+.modal-overlay.hide {
+  opacity: 0;
+}
+
+.modal-content.hide {
+  transform: translateY(-20px);
+}
+
+

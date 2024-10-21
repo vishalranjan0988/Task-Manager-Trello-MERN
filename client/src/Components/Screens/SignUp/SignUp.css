@@ -1,0 +1,164 @@
+/* General Styling */
+.signup-container {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+  }
+
+  .signup-text{
+    color: #007bff;
+  }
+  
+  .signup-box {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    text-align: center;
+    border: 1px solid #e1e1e1;
+  }
+  
+  .signup-box h2 {
+    color: #007bff;
+    margin-bottom: 20px;
+  }
+  
+  .signup-form input {
+    display: block;
+    width: 94%;
+    padding: 10px;
+    margin: 10px 0;
+    /* margin: auto; */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  .signup-button {
+    background-color: #007bff;
+    color: white;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .signup-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .login-text {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #000;
+  }
+  
+  .login-text a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .login-text a:hover {
+    text-decoration: underline;
+  }
+  
+  .google-button {
+    background-color: #007bff;
+    color: #fff;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .google-button:hover {
+    background-color: #f1f1f1;
+    color: #000;
+  }
+  
+
+  /* For tablets and devices with screens between 768px and 1024px */
+@media (max-width: 1024px) {
+    .signup-box {
+      width: 80%;
+      padding: 30px;
+    }
+  
+    .signup-form input {
+      font-size: 14px;
+      padding: 8px;
+    }
+  
+    .signup-button,
+    .google-button {
+      font-size: 15px;
+      padding: 10px;
+    }
+  
+    .signup-box h2 {
+      font-size: 24px;
+    }
+  }
+  
+  /* For mobile devices with screens between 480px and 767px */
+  @media (max-width: 767px) {
+    .signup-box {
+      width: 90%;
+      padding: 20px;
+    }
+  
+    .signup-form input {
+      font-size: 13px;
+      padding: 8px;
+    }
+  
+    .signup-button,
+    .google-button {
+      font-size: 14px;
+      padding: 10px;
+    }
+  
+    .signup-box h2 {
+      font-size: 22px;
+    }
+  
+    .login-text {
+      font-size: 13px;
+    }
+  }
+  
+  /* For small mobile devices with screens less than 480px */
+  @media (max-width: 480px) {
+    .signup-box {
+      width: 95%;
+      padding: 15px;
+    }
+  
+    .signup-form input {
+      font-size: 12px;
+      padding: 6px;
+    }
+  
+    .signup-button,
+    .google-button {
+      font-size: 13px;
+      padding: 8px;
+    }
+  
+    .signup-box h2 {
+      font-size: 20px;
+    }
+  
+    .login-text {
+      font-size: 12px;
+    }
+  }
+  

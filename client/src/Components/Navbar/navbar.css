@@ -1,0 +1,284 @@
+/* General Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1F75FE;
+  padding: 10px 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  height: 40px;
+  color: #fff;
+  position: relative;
+  z-index: 100;
+}
+
+.logo-div {
+  display: flex;
+  align-items: center;
+}
+
+.logo-div img {
+  max-width: 100px;
+  cursor: pointer;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+  padding: 0 20px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #ffdf00; /* Highlight link on hover */
+}
+
+.primaryBtn {
+  cursor: pointer;
+  font-weight: bold;
+  padding: 12px 25px;
+  font-size: 1rem;
+  border: none;
+  color: white;
+  background: #db183c;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.primaryBtn:hover {
+  background-color: #ff4d6d;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(219, 24, 44, 0.6);
+}
+
+.nav-items {
+  display: flex;
+  align-items: center;
+  margin: px;
+}
+
+/* Mobile Navbar */
+.nav-mobile {
+  display: none;
+}
+
+/* Tablet view (for screens between 600px to 800px) */
+@media screen and (max-width: 800px) {
+  .navbar ul {
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background-color: #1F75FE;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease-in-out;
+  }
+
+  .navbar.open ul {
+    height: 200px;
+  }
+
+  li {
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+  }
+
+  .primaryBtn {
+    margin: 10px auto;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    font-size: 30px;
+    color: white;
+  }
+
+  .logo-div img {
+    max-width: 80px;
+  }
+}
+
+/* Mobile view (for screens smaller than 600px) */
+@media screen and (max-width: 600px) {
+  .navbar {
+    justify-content: space-between;
+  }
+
+  .hamburger {
+    display: block;
+    font-size: 30px;
+    cursor: pointer;
+  }
+
+  ul {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #1F75FE;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    right: 0;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease-in-out;
+  }
+
+  .navbar.open ul {
+    height: 250px;
+  }
+
+  li {
+    padding: 15px 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .primaryBtn {
+    width: 100%;
+    margin-top: 10px;
+    padding: 12px;
+    font-size: 1rem;
+  }
+}
+
+.minimalLogoutBtn {
+  background-color: #1d4ed8; /* Blue background */
+  color: white; /* White text */
+  padding: 7px 25px; /* Padding for button size */
+  font-size: 16px; /* Text size */
+  font-weight: bold; /* Bold text */
+  border: 2px solid white; /* Thin white outline */
+  border-radius: 6px; /* Rounded corners */
+  cursor: pointer; /* Pointer on hover */
+  transition: all 0.3s ease; /* Smooth transition */
+  margin-right: 5px;
+}
+
+.minimalLogoutBtn:hover {
+  background-color: white; /* Switch to white background */
+  color: #1d4ed8; /* Blue text on hover */
+  border: 2px solid #1d4ed8; /* Blue outline on hover */
+  transform: translateY(-2px); /* Slight lift on hover */
+}
+
+.minimalLogoutBtn:active {
+  background-color: #1d4ed8; /* Revert to blue on click */
+  color: white; /* White text on click */
+  transform: translateY(0); /* Reset lift on click */
+}
+
+.minimalLogoutBtn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.4); /* White focus ring for accessibility */
+}
+
+
+/* Tablet view (for screens between 600px to 800px) */
+@media screen and (max-width: 800px) {
+  .navbar ul {
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background-color: #1F75FE;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease-in-out;
+  }
+
+  .navbar.open ul {
+    height: 200px;
+  }
+
+  li {
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+  }
+
+  .primaryBtn {
+    width: 100%;
+    margin: 10px auto;
+    padding: 12px 0; /* Adjust padding for smaller screens */
+    font-size: 0.9rem; /* Slightly smaller font for tablet view */
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    font-size: 30px;
+    color: white;
+  }
+
+  .logo-div img {
+    max-width: 80px;
+  }
+}
+
+/* Mobile view (for screens smaller than 600px) */
+@media screen and (max-width: 600px) {
+  .navbar {
+    justify-content: space-between;
+  }
+
+  .hamburger {
+    display: block;
+    font-size: 30px;
+    cursor: pointer;
+  }
+
+  ul {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #1F75FE;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    right: 0;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease-in-out;
+  }
+
+  .navbar.open ul {
+    height: 250px;
+  }
+
+  li {
+    padding: 15px 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .primaryBtn {
+    width: 90%; /* Ensure button width fits on smaller screens */
+    margin-top: 10px;
+    padding: 12px;
+    font-size: 0.85rem; /* Smaller font for mobile */
+  }
+
+  .minimalLogoutBtn {
+    width: 90%; /* Ensure logout button fits on mobile */
+    padding: 12px;
+    font-size: 0.85rem; /* Smaller font for mobile */
+    margin: 10px auto; /* Center button */
+  }
+}
